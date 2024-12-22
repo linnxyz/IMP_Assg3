@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Changi Airport Locker Booking</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav class="nav-bar">
+        <div class="nav-container">
+            <div class="logo">
+                <!-- Using a placeholder image for the logo -->
+                <img src="images/changi-logo.png" alt="Changi Airport Logo">
+            </div>
+            <div class="nav-links">
+                <a href="#">Locations</a>
+            </div>
+        </div>
+    </nav>
+    <div class="container">
+        <div class="header">
+            <h1>Baggage Locker Booking</h1>
+            <p>Store your baggage safely during your layover</p>
+        </div>
+
+        <form class="booking-form" id="lockerBookingForm">
+            <!-- Personal Information Section -->
+            <div class="form-section">
+                <h2 class="section-title">Personal Information</h2>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="firstName">First Name</label>
+                        <input type="text" id="firstName" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="lastName">Last Name</label>
+                        <input type="text" id="lastName" required>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="passport">Passport Number</label>
+                    <input type="text" id="passport" required>
+                </div>
+                <div class="form-group">
+                    <label for="flightNumber">Departure Flight Number</label>
+                    <input type="text" id="flightNumber" required>
+                </div>
+            </div>
+
+            <!-- Storage Time Selection -->
+            <div class="form-section">
+                <h2 class="section-title">Storage Time</h2>
+                <p>Please select your preferred storage start time:</p>
+                <div class="time-slots" id="timeSlots"></div>
+            </div>
+
+            <!-- Location Selection -->
+            <div class="form-section">
+                <h2 class="section-title">Locker Location</h2>
+                <div class="location-grid">
+                    <div class="location-option" data-location="T1-A">Terminal 1 Area A</div>
+                    <div class="location-option" data-location="T1-B">Terminal 1 Area B</div>
+                    <div class="location-option" data-location="T2-A">Terminal 2 Area A</div>
+                    <div class="location-option" data-location="T2-B">Terminal 2 Area B</div>
+                    <div class="location-option" data-location="T3-A">Terminal 3 Area A</div>
+                    <div class="location-option" data-location="T3-B">Terminal 3 Area B</div>
+                </div>
+            </div>
+
+            <!-- Contact Information -->
+            <div class="form-section">
+                <h2 class="section-title">Contact Information</h2>
+                <div class="form-group">
+                    <label for="email">Email Address</label>
+                    <input type="email" id="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="phone">Phone Number <span class="optional-tag">(Optional)</span></label>
+                    <input type="tel" id="phone">
+                </div>
+            </div>
+
+            <!-- Acknowledgement -->
+            <div class="form-section">
+                <div class="acknowledgement">
+                    <p>We will use your email address to send you important reminders about your baggage collection. If you provided a phone number, we may also send SMS notifications to ensure you don't forget your belongings.</p>
+                    <p>Reminders will be sent:</p>
+                    <br>
+                    <ul>
+                        <li>2 hours before your departure flight</li>
+                        <li>1 hour before your departure flight</li>
+                        <li>30 minutes before your departure flight</li>
+                    </ul>
+                </div>
+                <div class="checkbox-group">
+                    <input type="checkbox" id="agreement" required>
+                    <label for="agreement">I agree to receive notifications via email and SMS (if provided) regarding my baggage collection. I understand that these notifications are for my convenience and security.</label>
+                </div>
+            </div>
+
+            <button type="submit" class="button">Confirm Booking</button>
+        </form>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
